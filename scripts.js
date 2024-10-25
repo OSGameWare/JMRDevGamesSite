@@ -15,77 +15,52 @@ function reveal() {
 // Listen for scroll events
 window.addEventListener("scroll", reveal);
 
-// Initialize particles.js
+// Initialize particles.js with parallax effect
 particlesJS("particles-js", {
     particles: {
         number: {
-            value: 100, // Increase particle count
+            value: 100,
             density: {
                 enable: true,
                 value_area: 800
             }
         },
         color: {
-            value: "#ffffff" // Particle color
+            value: "#ffffff"
         },
         shape: {
-            type: "circle", // Shape type
+            type: "circle",
             stroke: {
                 width: 0,
                 color: "#000000"
-            },
-            polygon: {
-                nb_sides: 5
-            },
-            image: {
-                src: "img/github.svg",
-                width: 100,
-                height: 100
             }
         },
         opacity: {
             value: 0.5,
-            random: true, // Random opacity for a more dynamic look
-            anim: {
-                enable: false,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: false
-            }
+            random: true
         },
         size: {
-            value: 5, // Size of the particles
-            random: true, // Randomize particle sizes
-            anim: {
-                enable: false,
-                speed: 40,
-                size_min: 0.1,
-                sync: false
-            }
+            value: 5,
+            random: true
         },
         move: {
             enable: true,
-            speed: 1, // Slower movement for a gentle effect
+            speed: 1,
             direction: "none",
             random: true,
             straight: false,
             out_mode: "out",
-            bounce: false,
-            attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200
-            }
+            bounce: false
         }
     },
     interactivity: {
         detect_on: "canvas",
         events: {
             onhover: {
-                enable: false, // Disable interactions on hover
+                enable: false
             },
             onclick: {
-                enable: false, // Disable interactions on click
+                enable: false
             },
             resize: true
         }
@@ -93,7 +68,19 @@ particlesJS("particles-js", {
     retina_detect: true
 });
 
-// Initialize particles on load
+// Parallax effect on mouse move
+document.addEventListener("mousemove", function (e) {
+    const particlesCanvas = document.getElementById('particles-js').querySelector('canvas');
+    const moveAmount = 0.05; // Adjust for stronger or lighter parallax
+
+    // Calculate new positions based on mouse position
+    const offsetX = (e.clientX - window.innerWidth / 2) * moveAmount;
+    const offsetY = (e.clientY - window.innerHeight / 2) * moveAmount;
+
+    particlesCanvas.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+});
+
+// Initialize particles and reveal sections on load
 document.addEventListener("DOMContentLoaded", function() {
-    reveal(); // Call reveal on load to set initial visibility
+    reveal();
 });

@@ -67,6 +67,9 @@ html {
     width: 100%;
     height: 100%;
     z-index: -1; /* Make sure it's behind the content */
+    overflow: hidden;
+    top: 0;
+    left: 0;
 }
 
 body {
@@ -106,7 +109,7 @@ h1, h2 {
 
 /* Landing Section */
 .landing {
-    background: rgba(106, 17, 203, 0.8); /* Slightly transparent */
+    background: #6a11cbcc; /* Slightly transparent */
     color: white;
     padding: 30px 20px;
     text-align: center;
@@ -201,7 +204,7 @@ footer {
     padding: 20px;
     text-align: center;
     color: #ffffff;
-    background-color: rgba(26, 26, 26, 0.8); /* Optional: make it match the navbar */
+    background-color: #6a11cbcc; /* Optional: make it match the navbar */
 }
 
 footer .social-links {
@@ -213,7 +216,6 @@ footer .copyright {
     font-size: 0.9em;
 }
 
-
 .social-links a {
     margin: 0 15px;
     color: #3fa5ff;
@@ -224,4 +226,58 @@ footer .copyright {
 
 .social-links a:hover {
     color: #85d0ff;
+}
+
+/* Custom Scrollbar for Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px; /* Width of vertical scrollbar */
+    height: 8px; /* Height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #252525; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3fa5ff; /* Thumb color */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #85d0ff; /* Thumb color on hover */
+}
+
+/* Scrollbar for Firefox */
+* {
+    scrollbar-width: thin; /* Make scrollbar thinner */
+    scrollbar-color: #6a38ff #252525; /* Thumb and track color */
+}
+
+#about-me {
+    background-color: #6a11cbcc; /* Match your theme */
+    color: #ffffff;
+    padding: 60px;
+    border-radius: 8px;
+    margin: 40px 0; /* Add spacing between sections */
+    text-align: center; /* Center the text */
+}
+
+#about-me h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about-me p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+#about-me ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+}
+
+#about-me li {
+    font-size: 1.1em; /* Slightly smaller than the paragraph text */
+    margin: 10px 0; /* Space between list items */
 }
