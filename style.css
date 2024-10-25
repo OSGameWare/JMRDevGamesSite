@@ -73,28 +73,46 @@ html {
 }
 
 body {
+    animation: swirl 20s linear infinite; /* Smooth background swirl */
     font-family: Arial, sans-serif;
     color: #e4e4e4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: swirl 20s linear infinite; /* Adjusted for smoother transition */
     min-height: 100vh; /* Ensure body takes at least full viewport height */
 }
 
 /* Swirl Background Animation */
 @keyframes swirl {
     0% {
-        background: linear-gradient(135deg, #000000, #4b0082, #00008b); /* black, dark purple, dark blue */
+        background: linear-gradient(135deg, #000000, #4b0082, #00008b);
     }
-    25% {
+    10% {
+        background: linear-gradient(150deg, #000000, #4b0082, #00008b);
+    }
+    20% {
         background: linear-gradient(180deg, #000000, #4b0082, #00008b);
     }
-    50% {
+    30% {
+        background: linear-gradient(210deg, #000000, #4b0082, #00008b);
+    }
+    40% {
         background: linear-gradient(225deg, #000000, #4b0082, #00008b);
     }
-    75% {
+    50% {
+        background: linear-gradient(240deg, #000000, #4b0082, #00008b);
+    }
+    60% {
         background: linear-gradient(270deg, #000000, #4b0082, #00008b);
+    }
+    70% {
+        background: linear-gradient(300deg, #000000, #4b0082, #00008b);
+    }
+    80% {
+        background: linear-gradient(330deg, #000000, #4b0082, #00008b);
+    }
+    90% {
+        background: linear-gradient(360deg, #000000, #4b0082, #00008b);
     }
     100% {
         background: linear-gradient(135deg, #000000, #4b0082, #00008b);
@@ -115,26 +133,7 @@ h1, h2 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     padding-top: 100px; /* Adjusted padding for navbar overlap */
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff4081;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #e91e63;
-}
-
-.content-center {
-    text-align: center;
+    box-shadow: 0 4px 10px #000000; /* Subtle shadow for depth */
 }
 
 .landing h1 {
@@ -205,6 +204,7 @@ footer {
     text-align: center;
     color: #ffffff;
     background-color: #6a11cbcc; /* Optional: make it match the navbar */
+    box-shadow: 0 4px 10px #000000; /* Subtle shadow for depth */
 }
 
 footer .social-links {
@@ -254,30 +254,75 @@ footer .copyright {
 }
 
 #about-me {
-    background-color: #6a11cbcc; /* Match your theme */
-    color: #ffffff;
-    padding: 60px;
-    border-radius: 8px;
-    margin: 40px 0; /* Add spacing between sections */
-    text-align: center; /* Center the text */
+    background-color: #6a11cbcc; /* Darker background for better contrast */
+    color: #ffffff; /* Keep text white for readability */
+    padding: 60px 20px; /* Added horizontal padding */
+    border-radius: 8px; /* Smooth corners */
+    margin: 40px 0; /* Space between sections */
+    text-align: left; /* Align text to the left for a more formal look */
+    box-shadow: 0 4px 10px #000000; /* Subtle shadow for depth */
 }
 
 #about-me h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    text-align: center; /* Center the title */
 }
 
 #about-me p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-size: 1.1em; /* Slightly smaller for better flow */
+    line-height: 1.5; /* Increase line height for readability */
+    margin-bottom: 15px; /* Space between paragraphs */
 }
 
 #about-me ul {
     list-style-type: none; /* Remove default bullet points */
     padding: 0; /* Remove padding */
+    margin: 20px 0; /* Margin for spacing */
 }
 
 #about-me li {
-    font-size: 1.1em; /* Slightly smaller than the paragraph text */
+    font-size: 1.1em; /* Consistent size with paragraphs */
     margin: 10px 0; /* Space between list items */
+    background-color: #6a38ffcc; /* Light background for list items */
+    padding: 10px; /* Padding for list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    box-shadow: 0 4px 10px #000000cc; /* Subtle shadow for depth */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .section {
+        padding: 30px; /* Adjust padding for mobile */
+        width: 100%; /* Full width */
+    }
+
+    .landing h1 {
+        font-size: 2.5em; /* Adjust font size for mobile */
+    }
+
+    .landing {
+        padding: 20px; /* Reduced padding for mobile */
+    }
+
+    footer {
+        font-size: 0.8em; /* Smaller footer text */
+    }
+
+    h2 {
+        font-size: 2em; /* Adjusted heading size */
+    }
+
+    .project-card {
+        padding: 15px; /* Adjusted card padding */
+    }
+
+    .project-card h3 {
+        font-size: 1.5em; /* Adjusted card title size */
+    }
 }
