@@ -1,0 +1,209 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.8); /* Slight transparency */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around; /* Spread out items evenly */
+    list-style-type: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #3fa5ff;
+}
+
+/* Initial State for Sections */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Visible State for Sections */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Offset for Sections */
+.section {
+    padding-top: 100px; /* Offsets content for fixed navbar */
+}
+
+/* Background Particles */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Make sure it's behind the content */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: swirl 20s linear infinite; /* Adjusted for smoother transition */
+}
+
+/* Swirl Background Animation */
+@keyframes swirl {
+    0% {
+        background: linear-gradient(135deg, #000000, #4b0082, #00008b); /* black, dark purple, dark blue */
+    }
+    25% {
+        background: linear-gradient(180deg, #000000, #4b0082, #00008b);
+    }
+    50% {
+        background: linear-gradient(225deg, #000000, #4b0082, #00008b);
+    }
+    75% {
+        background: linear-gradient(270deg, #000000, #4b0082, #00008b);
+    }
+    100% {
+        background: linear-gradient(135deg, #000000, #4b0082, #00008b);
+    }
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Landing Section */
+.landing {
+    background: rgba(106, 17, 203, 0.8); /* Slightly transparent */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 150px; /* Adjusted padding for navbar overlap */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e91e63;
+}
+
+.content-center {
+    text-align: center;
+}
+
+.landing h1 {
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tagline {
+    font-size: 1.5em;
+    color: #b0b0b0;
+}
+
+/* Sections */
+.section {
+    padding: 60px;
+    width: 90%;
+    max-width: 900px;
+    border-bottom: 1px solid #333;
+    margin: 40px 0; /* Added vertical spacing */
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 20px;
+    background-color: #252525;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added shadow transition */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adding shadow on hover */
+}
+
+/* Contact Section */
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: #3fa5ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #85d0ff;
+}
