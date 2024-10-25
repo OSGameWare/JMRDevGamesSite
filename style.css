@@ -76,6 +76,7 @@ body {
     flex-direction: column;
     align-items: center;
     animation: swirl 20s linear infinite; /* Adjusted for smoother transition */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
 }
 
 /* Swirl Background Animation */
@@ -107,10 +108,10 @@ h1, h2 {
 .landing {
     background: rgba(106, 17, 203, 0.8); /* Slightly transparent */
     color: white;
-    padding: 100px 20px;
+    padding: 30px 20px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    padding-top: 150px; /* Adjusted padding for navbar overlap */
+    padding-top: 100px; /* Adjusted padding for navbar overlap */
 }
 
 .cta-button {
@@ -134,6 +135,8 @@ h1, h2 {
 }
 
 .landing h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
     animation: fadeIn 2s ease;
 }
 
@@ -150,15 +153,16 @@ h1, h2 {
 
 .tagline {
     font-size: 1.5em;
-    color: #b0b0b0;
+    color: #ffffff;
 }
 
 /* Sections */
 .section {
+    flex: 1; /* Allows sections to take up available space */
     padding: 60px;
     width: 90%;
     max-width: 900px;
-    border-bottom: 1px solid #333;
+    border: none;
     margin: 40px 0; /* Added vertical spacing */
 }
 
@@ -191,17 +195,31 @@ h1, h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adding shadow on hover */
 }
 
-/* Contact Section */
+/* Footer */
 footer {
+    width: 100%;
     padding: 20px;
     text-align: center;
+    color: #ffffff;
+    background-color: rgba(26, 26, 26, 0.8); /* Optional: make it match the navbar */
 }
+
+footer .social-links {
+    margin-bottom: 10px; /* Space between social links and copyright */
+}
+
+footer .copyright {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
 
 .social-links a {
     margin: 0 15px;
     color: #3fa5ff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 24px;
 }
 
 .social-links a:hover {
