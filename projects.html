@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="jmrdevgameslogo" href="img/favicon.ico">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <meta charset="UTF-8">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div id="particles-js"></div>
 
     <!-- About Section -->
@@ -20,7 +21,7 @@
             <!-- Navigation Links -->
             <nav class="page-nav">
                 <a href="index.html">Home</a> |
-                <a href="projects.html">Projects</a>
+                <a href="projects.html">Projects</a> |
                 <a href="mysetup.html">My Setup</a>
             </nav>
 
@@ -29,34 +30,22 @@
         </div>
     </section>
 
-    <section id="about-me" class="section">
-        <h2>About Me</h2>
-        <p>
-            Hello! I'm Justin, a student with a diverse range of interests in tech. 
-            I've gained experience through a semester in Computer Maintenance, 
-            a full year in Cybersecurity, and I’m currently in my second full year of Cybersecurity. 
-            I’m also learning Digital Publishing and Java 1, having previously completed a semester of 
-            Computer Science Essentials, which covered basic Python.
-        </p>
-        <p>
-            My interests lie in game development, software development, web design, and cybersecurity. 
-            I'm actively participating in CyberPatriot for my third year, where I tackle 
-            cybersecurity challenges, finding vulnerabilities and hardening Windows systems.
-        </p>
-        
-        <h3>My Skills:</h3>
-        <ul>
-            <li><strong>Operating Systems:</strong> Windows (DOS-11), Linux (Kali, Arch, Ubuntu, Debian)</li>
-            <li><strong>Coding Languages:</strong> HTML, CSS, Python, Java, PowerShell</li>
-            <li><strong>Graphic Design:</strong> Photoshop, Illustrator, InDesign, GIMP, Inkscape</li>
-            <li><strong>Video Editing:</strong> Premiere Pro, DaVinci Resolve, VSDC</li>
-            <li><strong>Game Engine:</strong> Clickteam Fusion 2.5</li>
-            <li><strong>Music Production:</strong> Ableton Live 12, BandLab</li>
-        </ul>
-        
-        <p>
-            Feel free to check out my portfolio to see my projects!
-        </p>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>X-Treme Pong</h3>
+                <p>Step back in time to the '80s arcade scene with this retro-inspired classic pong. Choose your level of challenge, from easy to impossible mode. Test your skills as you compete against AI in this game of virtual ping-pong.</p>
+                <a href="https://jmrdev.itch.io/x-treme-pong" target="_blank" class="project-link">Play on Itch.io</a>
+            </div>
+            <div class="project-card">
+                <h3>Windows-Security-Assessment-Script</h3>
+                <p>A PowerShell script designed to perform a comprehensive security assessment on Windows systems. It checks various security aspects, including open ports, administrative users, password policies, firewall status, and more.</p>
+                <a href="https://github.com/OSGameWare/Windows-Security-Assessment-Script/releases/tag/v1.0.0" target="_blank" class="project-link">View Script on GitHub</a>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
     </section>
 
     <!-- Contact Section -->
