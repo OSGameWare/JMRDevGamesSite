@@ -14,8 +14,8 @@ html {
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 50px;
+    margin-top: 50px;
     font-size: 1.2em;
 }
 
@@ -30,30 +30,26 @@ html {
     color: #ddd;
 }
 
-/* Initial State for Sections */
 .section {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Visible State for Sections */
 .section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Offset for Sections */
 .section {
-    padding-top: 100px; /* Offsets content for fixed navbar */
+    padding-top: 100px;
 }
 
-/* Background Particles */
 #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Make sure it's behind the content */
+    z-index: -1;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -79,16 +75,15 @@ html {
 }
 
 body {
-    animation: swirl 20s linear infinite; /* Smooth background swirl */
+    animation: swirl 20s linear infinite;
     font-family: Arial, sans-serif;
     color: #e4e4e4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    min-height: 100vh;
 }
 
-/* Swirl Background Animation */
 @keyframes swirl {
     0% {
         background: linear-gradient(135deg, #000000, #4b0082, #00008b);
@@ -131,15 +126,14 @@ h1, h2 {
     color: #ffffff;
 }
 
-/* Landing Section */
 .landing {
-    background: #6a11cbcc; /* Slightly transparent */
+    background: #6a11cbcc;
     color: white;
     padding: 30px 20px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    padding-top: 100px; /* Adjusted padding for navbar overlap */
-    box-shadow: 0 4px 10px #000000; /* Subtle shadow for depth */
+    padding-top: 100px;
+    box-shadow: 0 4px 10px #000000;
 }
 
 .landing h1 {
@@ -160,18 +154,18 @@ h1, h2 {
 }
 
 .tagline {
+    margin-top: 15px;
     font-size: 1.5em;
     color: #ffffff;
 }
 
-/* Sections */
 .section {
-    flex: 1; /* Allows sections to take up available space */
+    flex: 1;
     padding: 60px;
     width: 90%;
     max-width: 900px;
     border: none;
-    margin: 40px 0; /* Added vertical spacing */
+    margin: 40px 0;
 }
 
 .section h2 {
@@ -184,7 +178,7 @@ h1, h2 {
     line-height: 1.6;
 }
 
-/* Projects Section */
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -195,19 +189,19 @@ h1, h2 {
     padding: 20px;
     background-color: #252525;
     border-radius: 10px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added shadow transition */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
     overflow: hidden;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 10px #000000; /* Subtle shadow for depth */
+    box-shadow: 0 4px 10px #000000;
 }
 
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Adding shadow on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .project-card h3 {
@@ -229,7 +223,7 @@ h1, h2 {
     text-decoration: none;
     transition: background-color 0.3s;
     margin-top: auto;
-    box-shadow: 0 4px 10px #000000; /* Subtle shadow for depth */
+    box-shadow: 0 4px 10px #000000;
 }
 
 .project-link:hover {
@@ -244,18 +238,17 @@ h1, h2 {
 }
 
 
-/* Footer */
 footer {
     width: 100%;
     padding: 20px;
     text-align: center;
     color: #ffffff;
-    background-color: #6a11cbcc; /* Optional: make it match the navbar */
-    box-shadow: 0 4px 10px #000000; /* Subtle shadow for depth */
+    background-color: #6a11cbcc;
+    box-shadow: 0 4px 10px #000000;
 }
 
 footer .social-links {
-    margin-bottom: 10px; /* Space between social links and copyright */
+    margin-bottom: 10px;
 }
 
 footer .copyright {
@@ -275,101 +268,99 @@ footer .copyright {
     color: #85d0ff;
 }
 
-/* Custom Scrollbar for Webkit Browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-    width: 8px; /* Width of vertical scrollbar */
-    height: 8px; /* Height of horizontal scrollbar */
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #000000; /* Track color */
+    background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #3fa5ff; /* Thumb color */
+    background: #3fa5ff;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #85d0ff; /* Thumb color on hover */
+    background: #85d0ff;
 }
 
-/* Scrollbar for Firefox */
 * {
-    scrollbar-width: thin; /* Make scrollbar thinner */
-    scrollbar-color: #6a38ff #000000; /* Thumb and track color */
+    scrollbar-width: thin;
+    scrollbar-color: #6a38ff #000000;
 }
 
 #about-me {
-    background-color: #6a11cbcc; /* Darker background for better contrast */
-    color: #ffffff; /* Keep text white for readability */
-    padding: 60px 20px; /* Added horizontal padding */
-    border-radius: 8px; /* Smooth corners */
-    margin: 40px 0; /* Space between sections */
-    text-align: left; /* Align text to the left for a more formal look */
-    box-shadow: 0 4px 10px #000000; /* Subtle shadow for depth */
+    background-color: #6a11cbcc;
+    color: #ffffff;
+    padding: 60px 20px;
+    border-radius: 8px;
+    margin: 40px 0;
+    text-align: left;
+    box-shadow: 0 4px 10px #000000;
 }
 
 #about-me h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-align: center; /* Center the title */
+    text-align: center;
 }
 
 #about-me p {
-    font-size: 1.1em; /* Slightly smaller for better flow */
-    line-height: 1.5; /* Increase line height for readability */
-    margin-bottom: 15px; /* Space between paragraphs */
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 #about-me ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0; /* Remove padding */
-    margin: 20px 0; /* Margin for spacing */
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
 }
 
 #about-me li {
-    font-size: 1.1em; /* Consistent size with paragraphs */
-    margin: 10px 0; /* Space between list items */
-    background-color: #6a38ffcc; /* Light background for list items */
-    padding: 10px; /* Padding for list items */
-    border-radius: 5px; /* Rounded corners for list items */
-    box-shadow: 0 4px 10px #000000cc; /* Subtle shadow for depth */
+    font-size: 1.1em;
+    margin: 10px 0;
+    background-color: #6a38ffcc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px #000000cc;
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
     .navbar ul {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .section {
-        padding: 30px; /* Adjust padding for mobile */
-        width: 100%; /* Full width */
+        padding: 30px;
+        width: 100%;
     }
 
     .landing h1 {
-        font-size: 2.5em; /* Adjust font size for mobile */
+        font-size: 2.5em;
     }
 
     .landing {
-        padding: 20px; /* Reduced padding for mobile */
+        padding: 20px;
     }
 
     footer {
-        font-size: 0.8em; /* Smaller footer text */
+        font-size: 0.8em;
     }
 
     h2 {
-        font-size: 2em; /* Adjusted heading size */
+        font-size: 2em;
     }
 
     .project-card {
-        padding: 15px; /* Adjusted card padding */
+        padding: 15px;
     }
 
     .project-card h3 {
-        font-size: 1.5em; /* Adjusted card title size */
+        font-size: 1.5em;
     }
 }
