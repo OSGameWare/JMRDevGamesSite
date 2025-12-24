@@ -5,12 +5,10 @@
     box-sizing: border-box;
 }
 
-/* Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: center;
